@@ -1,0 +1,181 @@
+body {
+  overflow-x: hidden;
+  background-color: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  height: 55px;
+  width: auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #141414;
+}
+
+main {
+  padding-top: 70px;
+}
+
+.dropdown-genres {
+  min-width: 120px;
+}
+
+.dropdown-profile img {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
+}
+
+.netflix-track {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  padding: 20px 0;
+}
+
+.netflix-track::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card,
+.js-movie-card {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.movie-card img,
+.js-movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.movie-card:hover,
+.js-movie-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.netflix-letter-logo {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  color: #e50914;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transform: scaleY(1.5);
+  transform-origin: top left;
+  opacity: 0.9;
+}
+
+.scroller-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  width: 4%;
+  min-width: 40px;
+  background: rgba(20, 20, 20, 0.5);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    background 0.3s ease;
+}
+
+.btn-left {
+  left: 0;
+}
+
+.btn-right {
+  right: 0;
+}
+
+.netflix-row:hover .scroller-btn {
+  opacity: 1;
+}
+
+.scroller-btn:hover {
+  background: rgba(20, 20, 20, 0.8);
+}
+
+.footer-container {
+  max-width: 980px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.footer-container a,
+p {
+  font-size: small;
+}
+
+.icon-social a {
+  font-size: large;
+}
+
+@keyframes apparizione {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.netflix-row {
+  animation: apparizione ease-out both;
+  animation-timeline: view();
+  animation-range: contain 0% contain 50%;
+}
+
+.js-movie-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.js-movie-card p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  z-index: 1;
+}
