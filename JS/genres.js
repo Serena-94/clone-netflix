@@ -69,7 +69,7 @@ function showMoviesByGenre(genre) {
 // Per ogni film trovato nella lista, creo una nuova colonna e la relativa card, poi le aggiungo alla pagina.
     for (const movie of selectedMovies) {
         const col = document.createElement("div")
-        col.className = 'col-6 col-md-4 col-lg-2 mb-4'
+        col.className = "col-6 col-md-4 col-lg-2 mb-4 px-1"
 
         const card = document.createElement("div")
         card.className = "js-movie-card"

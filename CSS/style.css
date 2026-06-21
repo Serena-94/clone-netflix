@@ -55,7 +55,6 @@ main {
   aspect-ratio: 16 / 9;
   transition: transform 0.3s ease;
   cursor: pointer;
-  border-radius: 6px;
 }
 
 .movie-card img,
@@ -128,7 +127,7 @@ main {
 
 .footer-container {
   max-width: 980px;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 
@@ -162,7 +161,6 @@ p {
   display: flex;
   flex-direction: column;
   position: relative;
-  border-radius: 6px;
   overflow: hidden;
 }
 
